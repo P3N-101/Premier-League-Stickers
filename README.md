@@ -12,6 +12,6 @@ Power Apps Premier League Stickers App
 
 ![Gameweek Results](./assets/gameweek_matchoverview.png)
 
-![Gameweek Results](./assets/clippypoker.png)
+![Gameweek Results](./assets/clippypoker.gif)
 
 ![Gameweek Results](./assets/stickerstore.png)
