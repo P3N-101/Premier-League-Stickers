@@ -1,0 +1,1554 @@
+swagger: '2.0'
+info:
+  title: Statto
+  description: ''
+  version: '1.0'
+host: v3.football.api-sports.io
+basePath: /
+schemes:
+  - https
+consumes: []
+produces: []
+paths:
+  /predictions:
+    get:
+      responses:
+        default:
+          description: default
+          schema:
+            type: object
+            properties:
+              get:
+                type: string
+                description: get
+              parameters:
+                type: object
+                properties:
+                  fixture:
+                    type: string
+                    description: fixture
+                description: parameters
+              errors:
+                type: array
+                items: {}
+                description: errors
+              results:
+                type: integer
+                format: int32
+                description: results
+              paging:
+                type: object
+                properties:
+                  current:
+                    type: integer
+                    format: int32
+                    description: current
+                  total:
+                    type: integer
+                    format: int32
+                    description: total
+                description: paging
+              response:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    teams:
+                      type: object
+                      properties:
+                        away:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              format: int32
+                              description: id
+                            name:
+                              type: string
+                              description: name
+                            logo:
+                              type: string
+                              description: logo
+                            last_5:
+                              type: object
+                              properties:
+                                form:
+                                  type: string
+                                  description: form
+                                att:
+                                  type: string
+                                  description: att
+                                def:
+                                  type: string
+                                  description: def
+                                goals:
+                                  type: object
+                                  properties:
+                                    for:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: string
+                                          description: total
+                                        average:
+                                          type: string
+                                          description: average
+                                      description: for
+                                    against:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: string
+                                          description: total
+                                        average:
+                                          type: string
+                                          description: average
+                                      description: against
+                                  description: goals
+                              description: last_5
+                            league:
+                              type: object
+                              properties:
+                                form:
+                                  type: string
+                                  description: form
+                                fixtures:
+                                  type: object
+                                  properties:
+                                    played:
+                                      type: object
+                                      properties:
+                                        home:
+                                          type: string
+                                          description: home
+                                        away:
+                                          type: string
+                                          description: away
+                                        total:
+                                          type: string
+                                          description: total
+                                      description: played
+                                    wins:
+                                      type: object
+                                      properties:
+                                        home:
+                                          type: string
+                                          description: home
+                                        away:
+                                          type: string
+                                          description: away
+                                        total:
+                                          type: string
+                                          description: total
+                                      description: wins
+                                    draws:
+                                      type: object
+                                      properties:
+                                        home:
+                                          type: string
+                                          description: home
+                                        away:
+                                          type: string
+                                          description: away
+                                        total:
+                                          type: string
+                                          description: total
+                                      description: draws
+                                    loses:
+                                      type: object
+                                      properties:
+                                        home:
+                                          type: string
+                                          description: home
+                                        away:
+                                          type: string
+                                          description: away
+                                        total:
+                                          type: string
+                                          description: total
+                                      description: loses
+                                  description: fixtures
+                                goals:
+                                  type: object
+                                  properties:
+                                    for:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: string
+                                              description: home
+                                            away:
+                                              type: string
+                                              description: away
+                                            total:
+                                              type: string
+                                              description: total
+                                          description: total
+                                        average:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: string
+                                              description: home
+                                            away:
+                                              type: string
+                                              description: away
+                                            total:
+                                              type: string
+                                              description: total
+                                          description: average
+                                        minute:
+                                          type: object
+                                          properties:
+                                            0-15:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 0-15
+                                            16-30:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 16-30
+                                            31-45:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 31-45
+                                            46-60:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 46-60
+                                            61-75:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 61-75
+                                            76-90:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 76-90
+                                            91-105:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 91-105
+                                            106-120:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 106-120
+                                          description: minute
+                                      description: for
+                                    against:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: string
+                                              description: home
+                                            away:
+                                              type: string
+                                              description: away
+                                            total:
+                                              type: string
+                                              description: total
+                                          description: total
+                                        average:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: string
+                                              description: home
+                                            away:
+                                              type: string
+                                              description: away
+                                            total:
+                                              type: string
+                                              description: total
+                                          description: average
+                                        minute:
+                                          type: object
+                                          properties:
+                                            0-15:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 0-15
+                                            16-30:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 16-30
+                                            31-45:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 31-45
+                                            46-60:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 46-60
+                                            61-75:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 61-75
+                                            76-90:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 76-90
+                                            91-105:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 91-105
+                                            106-120:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  type: string
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 106-120
+                                          description: minute
+                                      description: against
+                                  description: goals
+                                biggest:
+                                  type: object
+                                  properties:
+                                    streak:
+                                      type: object
+                                      properties:
+                                        wins:
+                                          type: integer
+                                          format: int32
+                                          description: wins
+                                        draws:
+                                          type: integer
+                                          format: int32
+                                          description: draws
+                                        loses:
+                                          type: integer
+                                          format: int32
+                                          description: loses
+                                      description: streak
+                                    wins:
+                                      type: object
+                                      properties:
+                                        home:
+                                          type: string
+                                          description: home
+                                        away:
+                                          type: string
+                                          description: away
+                                      description: wins
+                                    loses:
+                                      type: object
+                                      properties:
+                                        home:
+                                          type: string
+                                          description: home
+                                        away:
+                                          type: string
+                                          description: away
+                                      description: loses
+                                    goals:
+                                      type: object
+                                      properties:
+                                        for:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: integer
+                                              format: int32
+                                              description: home
+                                            away:
+                                              type: integer
+                                              format: int32
+                                              description: away
+                                          description: for
+                                        against:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: integer
+                                              format: int32
+                                              description: home
+                                            away:
+                                              type: integer
+                                              format: int32
+                                              description: away
+                                          description: against
+                                      description: goals
+                                  description: biggest
+                                clean_sheet:
+                                  type: object
+                                  properties:
+                                    home:
+                                      type: integer
+                                      format: int32
+                                      description: home
+                                    away:
+                                      type: integer
+                                      format: int32
+                                      description: away
+                                    total:
+                                      type: integer
+                                      format: int32
+                                      description: total
+                                  description: clean_sheet
+                                failed_to_score:
+                                  type: object
+                                  properties:
+                                    home:
+                                      type: integer
+                                      format: int32
+                                      description: home
+                                    away:
+                                      type: integer
+                                      format: int32
+                                      description: away
+                                    total:
+                                      type: integer
+                                      format: int32
+                                      description: total
+                                  description: failed_to_score
+                                penalty:
+                                  type: object
+                                  properties:
+                                    scored:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: integer
+                                          format: int32
+                                          description: total
+                                        percentage:
+                                          type: string
+                                          description: percentage
+                                      description: scored
+                                    missed:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: integer
+                                          format: int32
+                                          description: total
+                                        percentage:
+                                          type: string
+                                          description: percentage
+                                      description: missed
+                                    total:
+                                      type: integer
+                                      format: int32
+                                      description: total
+                                  description: penalty
+                                lineups:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      formation:
+                                        type: string
+                                        description: formation
+                                      played:
+                                        type: integer
+                                        format: int32
+                                        description: played
+                                  description: lineups
+                                cards:
+                                  type: object
+                                  properties:
+                                    yellow:
+                                      type: object
+                                      properties:
+                                        0-15:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 0-15
+                                        16-30:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 16-30
+                                        31-45:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 31-45
+                                        46-60:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 46-60
+                                        61-75:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 61-75
+                                        76-90:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 76-90
+                                        91-105:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 91-105
+                                        106-120:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 106-120
+                                      description: yellow
+                                    red:
+                                      type: object
+                                      properties:
+                                        0-15:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 0-15
+                                        16-30:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 16-30
+                                        31-45:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 31-45
+                                        46-60:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 46-60
+                                        61-75:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 61-75
+                                        76-90:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 76-90
+                                        91-105:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 91-105
+                                        106-120:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 106-120
+                                      description: red
+                                  description: cards
+                              description: league
+                          description: away
+                      description: teams
+                description: response
+        '100':
+          description: default
+          schema:
+            type: object
+            properties:
+              get:
+                type: string
+                description: get
+              parameters:
+                type: object
+                properties:
+                  fixture:
+                    type: string
+                    description: fixture
+                description: parameters
+              errors:
+                type: array
+                items: {}
+                description: errors
+              results:
+                type: integer
+                format: int32
+                description: results
+              paging:
+                type: object
+                properties:
+                  current:
+                    type: integer
+                    format: int32
+                    description: current
+                  total:
+                    type: integer
+                    format: int32
+                    description: total
+                description: paging
+              response:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    teams:
+                      type: object
+                      properties:
+                        away:
+                          type: object
+                          properties:
+                            id:
+                              type: integer
+                              format: int32
+                              description: id
+                            name:
+                              type: string
+                              description: name
+                            logo:
+                              type: string
+                              description: logo
+                            last_5:
+                              type: object
+                              properties:
+                                form:
+                                  type: string
+                                  description: form
+                                att:
+                                  type: string
+                                  description: att
+                                def:
+                                  type: string
+                                  description: def
+                                goals:
+                                  type: object
+                                  properties:
+                                    for:
+                                      type: object
+                                      properties:
+                                        total:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: total
+                                        average:
+                                          type: string
+                                          description: average
+                                      description: for
+                                    against:
+                                      type: object
+                                      properties:
+                                        total:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: total
+                                        average:
+                                          type: string
+                                          description: average
+                                      description: against
+                                  description: goals
+                              description: last_5
+                            league:
+                              type: object
+                              properties:
+                                form:
+                                  type: string
+                                  description: form
+                                fixtures:
+                                  type: object
+                                  properties:
+                                    played:
+                                      type: object
+                                      properties:
+                                        home:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: home
+                                        away:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: away
+                                        total:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: total
+                                      description: played
+                                    wins:
+                                      type: object
+                                      properties:
+                                        home:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: home
+                                        away:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: away
+                                        total:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: total
+                                      description: wins
+                                    draws:
+                                      type: object
+                                      properties:
+                                        home:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: home
+                                        away:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: away
+                                        total:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: total
+                                      description: draws
+                                    loses:
+                                      type: object
+                                      properties:
+                                        home:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: home
+                                        away:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: away
+                                        total:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: total
+                                      description: loses
+                                  description: fixtures
+                                goals:
+                                  type: object
+                                  properties:
+                                    for:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: object
+                                          properties:
+                                            home:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: home
+                                            away:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: away
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                          description: total
+                                        average:
+                                          type: object
+                                          properties:
+                                            home:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: home
+                                            away:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: away
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                          description: average
+                                        minute:
+                                          type: object
+                                          properties:
+                                            0-15:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 0-15
+                                            16-30:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 16-30
+                                            31-45:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 31-45
+                                            46-60:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 46-60
+                                            61-75:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 61-75
+                                            76-90:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 76-90
+                                            91-105:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 91-105
+                                            106-120:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 106-120
+                                          description: minute
+                                      description: for
+                                    against:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: object
+                                          properties:
+                                            home:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: home
+                                            away:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: away
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                          description: total
+                                        average:
+                                          type: object
+                                          properties:
+                                            home:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: home
+                                            away:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: away
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                          description: average
+                                        minute:
+                                          type: object
+                                          properties:
+                                            0-15:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 0-15
+                                            16-30:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 16-30
+                                            31-45:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 31-45
+                                            46-60:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 46-60
+                                            61-75:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 61-75
+                                            76-90:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 76-90
+                                            91-105:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 91-105
+                                            106-120:
+                                              type: object
+                                              properties:
+                                                total:
+                                                  allOf:
+                                                  - type: integer
+                                                    format: int32
+                                                  description: total
+                                                percentage:
+                                                  type: string
+                                                  description: percentage
+                                              description: 106-120
+                                          description: minute
+                                      description: against
+                                  description: goals
+                                biggest:
+                                  type: object
+                                  properties:
+                                    streak:
+                                      type: object
+                                      properties:
+                                        wins:
+                                          type: integer
+                                          format: int32
+                                          description: wins
+                                        draws:
+                                          type: integer
+                                          format: int32
+                                          description: draws
+                                        loses:
+                                          type: integer
+                                          format: int32
+                                          description: loses
+                                      description: streak
+                                    wins:
+                                      type: object
+                                      properties:
+                                        home:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: home
+                                        away:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: away
+                                      description: wins
+                                    loses:
+                                      type: object
+                                      properties:
+                                        home:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: home
+                                        away:
+                                          allOf:
+                                          - type: integer
+                                            format: int32
+                                          description: away
+                                      description: loses
+                                    goals:
+                                      type: object
+                                      properties:
+                                        for:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: integer
+                                              format: int32
+                                              description: home
+                                            away:
+                                              type: integer
+                                              format: int32
+                                              description: away
+                                          description: for
+                                        against:
+                                          type: object
+                                          properties:
+                                            home:
+                                              type: integer
+                                              format: int32
+                                              description: home
+                                            away:
+                                              type: integer
+                                              format: int32
+                                              description: away
+                                          description: against
+                                      description: goals
+                                  description: biggest
+                                clean_sheet:
+                                  type: object
+                                  properties:
+                                    home:
+                                      type: integer
+                                      format: int32
+                                      description: home
+                                    away:
+                                      type: integer
+                                      format: int32
+                                      description: away
+                                    total:
+                                      type: integer
+                                      format: int32
+                                      description: total
+                                  description: clean_sheet
+                                failed_to_score:
+                                  type: object
+                                  properties:
+                                    home:
+                                      type: integer
+                                      format: int32
+                                      description: home
+                                    away:
+                                      type: integer
+                                      format: int32
+                                      description: away
+                                    total:
+                                      type: integer
+                                      format: int32
+                                      description: total
+                                  description: failed_to_score
+                                penalty:
+                                  type: object
+                                  properties:
+                                    scored:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: integer
+                                          format: int32
+                                          description: total
+                                        percentage:
+                                          type: string
+                                          description: percentage
+                                      description: scored
+                                    missed:
+                                      type: object
+                                      properties:
+                                        total:
+                                          type: integer
+                                          format: int32
+                                          description: total
+                                        percentage:
+                                          type: string
+                                          description: percentage
+                                      description: missed
+                                    total:
+                                      type: integer
+                                      format: int32
+                                      description: total
+                                  description: penalty
+                                lineups:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      formation:
+                                        type: string
+                                        description: formation
+                                      played:
+                                        type: integer
+                                        format: int32
+                                        description: played
+                                  description: lineups
+                                cards:
+                                  type: object
+                                  properties:
+                                    yellow:
+                                      type: object
+                                      properties:
+                                        0-15:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 0-15
+                                        16-30:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 16-30
+                                        31-45:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 31-45
+                                        46-60:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 46-60
+                                        61-75:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 61-75
+                                        76-90:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 76-90
+                                        91-105:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 91-105
+                                        106-120:
+                                          type: object
+                                          properties:
+                                            total:
+                                              allOf:
+                                              - type: integer
+                                                format: int32
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 106-120
+                                      description: yellow
+                                    red:
+                                      type: object
+                                      properties:
+                                        0-15:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 0-15
+                                        16-30:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 16-30
+                                        31-45:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 31-45
+                                        46-60:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 46-60
+                                        61-75:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 61-75
+                                        76-90:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 76-90
+                                        91-105:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 91-105
+                                        106-120:
+                                          type: object
+                                          properties:
+                                            total:
+                                              type: string
+                                              description: total
+                                            percentage:
+                                              type: string
+                                              description: percentage
+                                          description: 106-120
+                                      description: red
+                                  description: cards
+                              description: league
+                          description: away
+                      description: teams
+                description: response
+      summary: Get Predictions
+      operationId: GetPredictions
+      parameters:
+        - name: fixture
+          in: query
+          required: false
+          type: integer
+      description: Get predictions about a fixture.
+definitions: {}
+parameters: {}
+responses: {}
+securityDefinitions:
+  API Key:
+    type: apiKey
+    in: header
+    name: x-apisports-key
+security:
+  - API Key: []
+tags: []
