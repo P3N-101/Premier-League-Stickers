@@ -2,6 +2,8 @@
 
 Power Apps Premier League Stickers App
 
+you will need Scott Durow's Power Drag Drop Component available [here](https://github.com/scottdurow/power-drag-drop)!
+
 ![Home Screen](./assets/home.png)
 
 ![Sticker Album](./assets/stickeralbum.png)
